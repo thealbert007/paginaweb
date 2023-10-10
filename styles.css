@@ -486,6 +486,7 @@ a {
     transition: transform 0.2s, box-shadow 0.2s;
     width: 45%; /* Ancho para dispositivos móviles, dos columnas en una fila */
     padding: 20px;
+    border: 1px solid #2222;
 }
 
 /* Estilos para la imagen circular */
