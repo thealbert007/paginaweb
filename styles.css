@@ -513,7 +513,6 @@ a {
 @media (max-width: 767px) {
 .category-bar {
     flex-direction: row; /* Cambia de columna a fila para dispositivos móviles */
-    justify-content: center; /* Centra las categorías horizontalmente */
 }
 
 .category {
