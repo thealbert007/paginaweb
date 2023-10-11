@@ -6,6 +6,57 @@
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <title>ENY Boutiques®: Tu estilo, nuestra pasión✔</title>
     <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu archivo CSS (opcional) -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+    var current = 0;
+    var imagenes = new Array();
+    
+    $(document).ready(function() {
+        var numImages = 10;
+        if (numImages <= 3) {
+            $('.right-arrow').css('display', 'none');
+            $('.left-arrow').css('display', 'none');
+        }
+    
+        $('.left-arrow').on('click',function() {
+            if (current > 0) {
+                current = current - 1;
+            } else {
+                current = numImages - 3;
+            }
+    
+            $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+    
+            return false;
+        });
+    
+        $('.left-arrow').on('hover', function() {
+            $(this).css('opacity','0.5');
+        }, function() {
+            $(this).css('opacity','1');
+        });
+    
+        $('.right-arrow').on('hover', function() {
+            $(this).css('opacity','0.5');
+        }, function() {
+            $(this).css('opacity','1');
+        });
+    
+        $('.right-arrow').on('click', function() {
+            if (numImages > current + 3) {
+                current = current+1;
+            } else {
+                current = 0;
+            }
+    
+            $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+    
+            return false;
+        }); 
+    });
+    </script>
+    
 </head>
 <body>
 
@@ -166,6 +217,97 @@
         <div>
         <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?93241279&data_platform=code&data_date=2023-10-06" charset="utf-8"></script><script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-93241279");</script>
         </div>
+
+
+        
+        <h3 class="texto-centrado">Productos Disponibles</h3>
+        <header>
+        <!-- UBICACION DE CARRUSEL DE PRODUCTOS -->
+        <div id="carrusel">
+            <a href="#" class="left-arrow"><img src="images/left-arrow.png" /></a>
+            <a href="#" class="right-arrow"><img src="images/right-arrow.png" /></a>
+            <div class="carrusel">
+                <div class="product" id="product_1">
+                    <img src="gallery/01.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_2">
+                    <img src="gallery/02.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_3">
+                    <img src="gallery/03.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_4">
+                    <img src="gallery/01.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_5">
+                    <img src="gallery/02.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_6">
+                    <img src="gallery/03.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_7">
+                    <img src="gallery/03.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_8">
+                    <img src="gallery/03.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_9">
+                    <img src="gallery/03.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_10">
+                    <img src="gallery/03.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_11">
+                    <img src="gallery/03.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_12">
+                    <img src="gallery/03.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_13">
+                    <img src="gallery/03.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_14">
+                    <img src="gallery/03.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+                <div class="product" id="product_15">
+                    <img src="gallery/03.jpg" width="195" height="100" />
+                    <h5>Producto</h5>
+                    <p>30.00 $</p>
+                </div>
+            </div>
+        </div>
+        <!-- UBICACION DE CARRUSEL DE PRODUCTOS -->
+        </header>
+
+    
 
         <hr>
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
