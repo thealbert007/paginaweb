@@ -614,7 +614,6 @@ a {
     position: fixed;
     bottom: 5px;
     left: 5px;
-    transition: transform 0.3s, box-shadow 0.3s;
     z-index: 1000;
 }
 
@@ -656,7 +655,6 @@ a {
     position: fixed;
     bottom: 60px;
     left: 5px;
-    transition: transform 0.3s, box-shadow 0.3s;
     z-index: 1000;
 }
 
