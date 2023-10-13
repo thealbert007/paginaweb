@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!--LENGUAJE DE LA WEB-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <title>ENY Boutique®: Tu estilo, nuestra pasión✔</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon"> <!--FAVICON ICO DE LA WEB-->
+    <title>ENY Boutique®: Tu estilo, nuestra pasión✔</title> <!--NOMBRE DE LA WEB-->
     <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu archivo CSS (opcional) -->
 
+    <!--FUNCION DE CARRUSEL DE PRODUCTOS-->
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script>
     var current = 0;
@@ -56,12 +57,19 @@
         }); 
     });
     </script>
-
+    <!--FUNCION DE CARRUSEL DE PRODUCTOS-->
 </head>
-<body>
-    
-    <div class="floating-bar">
 
+<body>
+    <!--BOTON FLOTANTE DE WHATSAPP-->
+    <a href="https://wa.me/584142343845" class="whatsapp-button" target="_blank">
+        <div class="radar"></div>
+        Chat En Linea
+    </a>
+    <!--BOTON FLOTANTE DE WHATSAPP-->
+
+    <!--CABECERA PRINCIPAL DE LA WEB-->
+    <div class="floating-bar">
         <header>
             <div class="header-content">
                 <div class="logo">
@@ -96,9 +104,10 @@
                 </ul>
             </nav>
         </header>
-
     </div>
+    <!--CABECERA PRINCIPAL DE LA WEB-->
     
+    <!--SEGUNDO HEADER DEBAJO DE LA CABECERA PRINCIPAL-->
     <header class="second-header">
         <div class="second-header-content">
         <div class="user-options">
@@ -108,6 +117,7 @@
         </div>
     </div>
     </header>
+    <!--SEGUNDO HEADER DEBAJO DE LA CABECERA PRINCIPAL-->
 
     <!--SLIDE SHOW PRINCIPAL-->
     <div class="slideshow-container">
@@ -160,18 +170,17 @@
     </div>
     <!-- BOTÓN DE USUARIO FLOTANTE -->
 
-    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-    <div class="elfsight-app-243fda88-9053-474d-a699-8fbf980c78f0"></div>
-
     <header class="third-header">
         <div class="third-header-content">
             <h3 class="texto-centrado">Categorias Disponibles</h3>
 
+    <!--SCRIPT DE CATEGORIAS DE ECWID-->
     <div id="my-categories-93241279"></div>
     <div>
     <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?93241279&data_platform=code&data_date=2023-10-06" charset="utf-8"></script>
     <script type="text/javascript"> xCategoriesV2("id=my-categories-93241279"); </script>
     </div>
+    <!--SCRIPT DE CATEGORIAS DE ECWID-->
 
     <!-- UBICACION DE BARRA DE CATEGORIAS -->
     <div class="category-bar">
@@ -216,16 +225,14 @@
     <!-- UBICACION DE BARRA DE CATEGORIAS -->
     </header>
 
-        <br>
-        <div>
-        <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?93241279&data_platform=code&data_date=2023-10-06" charset="utf-8"></script>
-        <script type="text/javascript">Ecwid.init();</script>
-        </div>
-        
+        <br> <!--ESPACIADOR-->
+
+        <!--SCRIPT DE TIENDA DE ECWID-->
         <div id="my-store-93241279"></div>
         <div>
         <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?93241279&data_platform=code&data_date=2023-10-06" charset="utf-8"></script><script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-93241279");</script>
         </div>
+        <!--SCRIPT DE TIENDA DE ECWID-->
 
         <!-- UBICACION DE CARRUSEL DE PRODUCTOS -->
         <h3 class="texto-centrado">Productos Disponibles</h3>
@@ -314,18 +321,22 @@
         </header>
         <!-- UBICACION DE CARRUSEL DE PRODUCTOS -->
 
-        <hr>
+        <hr> <!--SEPARADOR-->
+
+        <!--SCRIPT DE OPINIONES Y COMENTARIOS-->
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
         <div class="elfsight-app-959ebd31-623f-4f7e-a582-ede68e0da3ff"></div>
-        <hr>
+        <!--SCRIPT DE OPINIONES Y COMENTARIOS-->
+
+        <hr> <!--SEPARADOR-->
 
         <!--PIE DE PAGINA DE INFORMACION-->
         <div class="info-footer">
             <div class="columna">
                 <h3>Contacto</h3>
-                <p>Dirección: 123 Calle Principal</p>
-                <p>Teléfono: (123) 456-7890</p>
-                <p>Email: info@tuempresa.com</p>
+                <p>Dirección: </p>
+                <p>Teléfono: </p>
+                <p>Email: </p>
             </div>
             <div class="columna">
                 <h3>Acerca de Nosotros</h3>
@@ -354,12 +365,28 @@
         </div>
         <!--PIE DE PAGINA DE INFORMACION-->
 
+    <!--FOOTER DE CREDENCIALES Y DERECHOS DE LA WEB-->
     <footer>
         <p>&copy; 2023 - ENY Boutiques - Todos los Derechos Reservados</p>
     </footer>
+    <!--FOOTER DE CREDENCIALES Y DERECHOS DE LA WEB-->
 
     <!-- SCRIPT ADICIONALES -->
     <script>
+
+        function pulsateButton() {
+            const button = document.querySelector(".whatsapp-button");
+            button.style.transform = "scale(1.1)";
+            setTimeout(() => {
+                button.style.transform = "scale(1)";
+            }, 500);
+        }
+
+        // Inicia el efecto de pulsación y radar cada 5 segundos
+        setInterval(() => {
+            pulsateButton();
+            setTimeout(pulsateButton, 2500); // Pulsación después de 2.5 segundos
+        }, 5000); // Se inicia cada 5 segundos
 
         let slideIndex = 0;
 
@@ -396,5 +423,6 @@
         });
 
     </script>
+    <!-- SCRIPT ADICIONALES -->
 </body>
 </html>
