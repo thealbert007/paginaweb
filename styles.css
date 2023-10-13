@@ -613,7 +613,7 @@ a {
 .cart-button {
     position: fixed;
     bottom: 5px;
-    left: 5px;
+    left: 3px;
     transition: transform 0.3s, box-shadow 0.3s;
     z-index: 1000;
 }
@@ -659,8 +659,8 @@ a {
 /*ESTILO DE BOTON FLOTANTE DE USUARIO*/
 .user-button {
     position: fixed;
-    bottom: 60px;
-    left: 5px;
+    bottom: 52px;
+    left: 3px;
     transition: transform 0.3s, box-shadow 0.3s;
     z-index: 1000;
 }
