@@ -614,6 +614,7 @@ a {
     position: fixed;
     bottom: 5px;
     left: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
     z-index: 1000;
 }
 
@@ -637,6 +638,11 @@ a {
     height: auto;
 }
 
+.cart-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Estilos para dispositivos móviles */
 @media (max-width: 767px) {
     .cart-button {
@@ -655,6 +661,7 @@ a {
     position: fixed;
     bottom: 60px;
     left: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
     z-index: 1000;
 }
 
@@ -676,6 +683,11 @@ a {
 .user-icon img {
     width: 30px;
     height: auto;
+}
+
+.user-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos para dispositivos móviles */
